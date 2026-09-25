@@ -8,7 +8,7 @@
 <body>
     <header>
         <h1>Bienvenidos a Café Aurora</h1> 
-        <p>Un lugar para disfrutar un buen café.</p>
+        <h2>Un lugar para disfrutar un buen café.</h2>
 
         <nav>
             <ul>
@@ -19,13 +19,31 @@
         </nav>
     </header>
     <main>
-        <section id="Inicio">
-            <h2>Bienvenidos a Café Aurora</h2>
-            <p>Te invitamos a disfrutar de nuestros cafés, productos artesanales y un ambiente cálido.</p>
+
+         <section id="about">
+            <h2>Sobre Nosotros</h2>
+            <p>Café Aurora es un lugar acogedor donde puedes disfrutar de una variedad de cafés y postres. Nuestro objetivo es ofrecer una experiencia única a nuestros clientes.</p>
+        </section>
+        <section id="gallery">
+            <h2>Conocé Café Aurora</h2>
+            <div class="gallery-container">
+                <figure>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOV6UIEgoLy6tdGYIYF_YsOgtGymuSzx_sfEZt8n003g&s=10" alt="Café Latte Aurora">
+                    <figcaption>Café Latte Aurora</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAwUKjg3OT4SZ0ZAJQcYEetIJmeUT30nvuMRsO_uHRMw&s=10" alt="Cheesecake Aurora">
+                    <figcaption>Cheesecake Artesanal</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCCZaGMAVw8bDbnebhRJznBoBr2Zr9wpkj1wJRR45VBQ&s=10" alt="Té Verde Aurora">
+                    <figcaption>Té Verde Aurora</figcaption>
+                </figure>
+            </div>
         </section>
         <section id="menu">
             <h2>Nuestro Menú</h2>
-
+        </section>
         <article>
             <h3>Especialidades de Café</h3>
             <ul>
@@ -55,16 +73,15 @@
                 <li>Lemon Pie</li>
 
             </ul>
-        </section>
-
-        <section id="about">
-            <h2>Sobre Nosotros</h2>
-            <p>Café Aurora es un lugar acogedor donde puedes disfrutar de una variedad de cafés y postres. Nuestro objetivo es ofrecer una experiencia única a nuestros clientes.</p>
-        </section>
+        </section> 
 
         <section id="contact">
             <h2>Contacto</h2>
             <p>Te esperamos!</p>
+
+             <section id="Inicio">
+            <h2>Te invitamos a disfrutar de nuestros cafés, productos artesanales y un ambiente cálido.</h2>
+        </section>
 
             <section id="reserva">
                 <h2>Reservá tu mesa</h2>
@@ -97,3 +114,20 @@
                     </select>
                 <form> <input type="submit" value="Reservar"> </form> 
             </section>
+
+            <br>
+            <h3>Dónde preferís sentarte?</h3>
+            <input type="radio" id="interior" name="asiento" value="interior">
+            <label for="interior">Interior</label><br>
+            <input type="radio" id="exterior" name="asiento" value="exterior">
+            <label for="exterior">Exterior</label><br>
+
+            <br>
+            <label for="comentarios">Comentarios o preferencias:</label><br>
+            <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea>
+
+            <br>
+            <input type="submit" value="Enviar"> 
+        </form>
+        </section>
+    </main>
