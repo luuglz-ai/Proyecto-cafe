@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Café Aurora</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -41,43 +42,103 @@
                 </figure>
             </div>
         </section>
+        <section id="audio">
+    <h2>Ambiente de Café Aurora</h2>
+
+    <audio controls>
+        <source src="audio/cafe-ambiente.mp3.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+</section>
         <section id="menu">
             <h2>Nuestro Menú</h2>
-        </section>
         <article>
-            <h3>Especialidades de Café</h3>
+                <h3>Especialidades de Café</h3> 
             <ul>
-                <li>Café Espresso</li>
-                <li>Café Latte</li>
-                <li>Café Cappuccino</li>
-                <li>Café Americano</li>
-                <li>Café Mocha</li>
+                <li>
+                    <strong>Café Espresso</strong>
+    <p>Espresso intenso preparado con café recién molido.</p> 
+                </li>
+                <li>
+                    <strong>Café Latte</strong>
+    <p>Latte cremoso con café espresso y leche vaporizada.</p>
+                </li>
+                <li>
+                    <strong>Café Cappuccino</strong>
+    <p>Cappuccino con espuma de leche y canela.</p>
+                </li>
+                <li>
+                    <strong>Café Americano</strong>
+    <p>Americano con café espresso y agua caliente.</p>
+                </li>
+                <li>
+                    <strong>Café Mocha</strong>
+    <p>Mocha con café espresso, leche y chocolate.</p>
+                </li>
             </ul>
         </article>
         <article>
             <h3>Infusiones</h3>
             <ul>
-                <li>Té Verde</li>
-                <li>Té Negro</li>
-                <li>Té de frutilla</li>
-                <li>Té de Hierba</li>
-                <li>Té de frutos rojos</li>
+                <li>
+                     <strong>Té Verde</strong>
+    <p>Té verde suave y aromático, ideal para disfrutar caliente.</p> 
+                </li>
+                <li>
+                    <strong>Té Negro</strong>
+    <p>Té negro robusto y aromático, perfecto para momentos tranquilos.</p>
+                </li>
+                <li>
+                    <strong>Té de frutilla</strong>
+    <p>Té de frutilla refrescante y delicioso, ideal para días soleados.</p>
+                </li>
+                <li>
+                    <strong>Té de Hierba</strong>
+    <p>Té de hierba relajante y natural, perfecto para momentos de calma.</p>
+                </li>
+                <li>
+                    <strong>Té de Frutos rojos</strong>
+    <p>Té de frutos rojos antioxidante y delicioso, ideal para días saludables.</p>
+                </li>
             </ul>
         </article>
         <article>
             <h3>Pasteles y Postres</h3>
             <ul>
-                <li>Pasteles de Vainilla</li>
-                <li>Postres de Chocolate</li>
-                <li>Cheesecake</li>
-                <li>Lemon Pie</li>
+                <li>
+                    <strong>Pasteles de Vainilla</strong>
+                    <p>Pastel suave de vainilla, dulce y esponjoso.</p>
+                </li>
+                <li>
+                    <strong>Postres de Chocolate</strong>
+                    <p>Postre indulgente con chocolate rico y cremoso.</p>
+                </li>
+                <li>
+                    <strong>Cheesecake</strong>
+                    <p>Cheesecake clásico con base de galleta y relleno cremoso.</p>
+                </li>
+                <li>
+                    <strong>Lemon Pie</strong>
+                    <p>Pastel de limón con masa crujiente y relleno ácido y dulce.</p>
+                </li>
 
             </ul>
+        </article> 
         </section> 
 
         <section id="contact">
             <h2>Contacto</h2>
-            <p>Te esperamos!</p>
+            <p class="contact-intro">
+    En Café Aurora, cada taza cuenta una historia. Creamos un espacio cálido y acogedor donde el aroma del café recién preparado se encuentra con pequeños momentos para disfrutar, compartir y desconectar de la rutina. ☕✨ </p>
+            <p class="contact-description">
+Ya sea para comenzar el día, encontrarte con alguien especial o simplemente regalarte un momento de calma, te invitamos a hacer de Café Aurora tu lugar favorito.
+</p> 
+
+            <div class="contact-info">
+    <p>📍 Av. de los Cafés 123</p>
+    <p>🕐 Lunes a domingo · 9:00 a 20:00</p>
+    <p>📧 contacto@cafeaurora.com</p>
+</div> 
 
              <section id="Inicio">
             <h2>Te invitamos a disfrutar de nuestros cafés, productos artesanales y un ambiente cálido.</h2>
@@ -85,24 +146,27 @@
 
             <section id="reserva">
                 <h2>Reservá tu mesa</h2>
+                <p class="reserva-intro">
+    Elegí el día, horario y lugar que preferís para disfrutar de Café Aurora.
+</p> 
              
                 <form> <label for="nombre">Nombre:</label> 
-                    <input type="text" id="nombre" name="nombre"> </form>
+                    <input type="text" id="nombre" name="nombre" required>
                     <br>
-                <form> <label for="email">Email:</label>
-                    <input type="email" id="email" name="email"> </form>
+                 <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
                     <br>
-                <form> <label for="fecha">Fecha:</label>
-                    <input type="date" id="fecha" name="fecha"> </form>
+                <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" name="fecha" required>
                     <br>
-                <form> <label for="hora">Hora:</label>
-                    <input type="time" id="hora" name="hora"> </form>
+                <label for="hora">Hora:</label>
+                    <input type="time" id="hora" name="hora" required>
                     <br>
-                <form> <label for="personas">Cantidad de personas:</label>
-                    <input type="number" id="personas" name="personas" min="1" max="30"> </form>
+                <label for="personas">Cantidad de personas:</label>
+                    <input type="number" id="personas" name="personas" min="1" max="30" required>
                     <br>
-                    <label for="horario">Horario:</label>
-                    <select id="horario" name="horario">
+                    <label for="horario">Horario: </label>
+                    <select id="horario" name="horario" required>
                         <option value="9:00">9:00 AM</option>
                         <option value="10:00">10:00 AM</option>
                         <option value="11:00">11:00 AM</option>
@@ -112,22 +176,31 @@
                         <option value="18:00">18:00 PM</option>
                         <option value="19:00">19:00 PM</option>
                     </select>
-                <form> <input type="submit" value="Reservar"> </form> 
+                <input type="submit" value="Reservar">
             </section>
 
             <br>
-            <h3>Dónde preferís sentarte?</h3>
-            <input type="radio" id="interior" name="asiento" value="interior">
-            <label for="interior">Interior</label><br>
-            <input type="radio" id="exterior" name="asiento" value="exterior">
-            <label for="exterior">Exterior</label><br>
+            <h3>¿Dónde preferís sentarte?</h3>
+            <div class="opciones-asiento">
+    <div>
+        <input type="radio" id="interior" name="asiento" value="interior" required>
+        <label for="interior">☕ Interior</label>
+    </div>
 
+    <div>
+        <input type="radio" id="exterior" name="asiento" value="exterior">
+        <label for="exterior">🌿 Exterior</label>
+    </div>
+</div> 
             <br>
-            <label for="comentarios">Comentarios o preferencias:</label><br>
+            <label for="comentarios">Comentarios o preferencias:</label>
             <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea>
-
-            <br>
-            <input type="submit" value="Enviar"> 
+           <button type="submit">Enviar</button> 
         </form>
         </section>
     </main>
+    <footer>
+        <p>&copy; 2026 Café Aurora. Todos los derechos reservados.</p>
+    </footer> 
+    </body>
+</html>
