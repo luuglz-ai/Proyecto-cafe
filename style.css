@@ -61,11 +61,40 @@ section h2 {
     color: #6f4e37;
 }
 article {
-    background-color: #f8f1e9;
-    padding: 20px;
+    background-color: rgba(248, 241, 233, 0.95);
+    padding: 25px;
     margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(62, 39, 35, 0.12);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 16px rgba(62, 39, 35, 0.18);
+}
+article li strong {
+    transition: color 0.3s;
+}
+
+article li:hover strong {
+    color: #8b5e3c;
+}
+article li p {
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: 0.85;
+}
+.gallery-container img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 18px rgba(62, 39, 35, 0.25);
+}
+#audio audio {
+    width: 100%;
+    max-width: 500px;
 }
 article h3 {
     color: #6f4e37;
@@ -137,6 +166,12 @@ h1,
 h2,
 h3 {
     font-family: Georgia, serif;
+}
+header h1 {
+    font-family: "Brush Script MT", "Segoe Script", cursive;
+    font-style: italic;
+    font-weight: normal;
+    letter-spacing: 1px;
 }
 section h2,
 article h3 {
@@ -267,11 +302,10 @@ nav a:hover {
 }
 .opciones-asiento {
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 25px;
+    gap: 8px;
+    margin: 10px 0 30px;
+    width: 100%;
 }
-
 .opciones-asiento div {
     flex: 1;
 }
@@ -282,7 +316,9 @@ nav a:hover {
 
 .opciones-asiento label {
     display: block;
-    padding: 15px;
+    padding: 14px 40px;
+    width: 100%;
+    box-sizing: border-box;
     text-align: center;
     border: 1px solid #d6c2b0;
     border-radius: 10px;
@@ -355,4 +391,107 @@ nav a:hover {
 }.contact-intro {
     font-size: 22px;
     font-weight: bold;
+}
+header h1 {
+    margin-bottom: 10px;
+    font-size: 48px;
+}
+
+header h2 {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+html {
+    scroll-behavior: smooth;
+}
+.opciones-mesa {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin: 10px 0 30px;
+    width: 100%;
+}
+
+.opciones-mesa input[type="radio"] {
+    display: none;
+}
+
+.opciones-mesa label {
+    display: block;
+    padding: 14px 30px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #d6c2b0;
+    border-radius: 8px;
+    background-color: #fffaf5;
+    color: #3e2723;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.opciones-mesa label:hover {
+    background-color: #f0e2d5;
+}
+
+.opciones-mesa input[type="radio"]:checked + label {
+    background-color: #6f4e37;
+    color: white;
+    border-color: #6f4e37;
+}
+.opciones-mesa small {
+    display: block;
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: normal;
+    opacity: 0.75;
+}
+#reserva select {
+    appearance: none;
+    background-color: #fffaf5;
+    border: 1px solid #d6c2b0;
+    border-radius: 8px;
+    padding: 11px 40px 11px 12px;
+    font-size: 15px;
+    color: #3e2723;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+#reserva {
+    position: relative;
+}
+
+#reserva select {
+    background-image: linear-gradient(45deg, transparent 50%, #6f4e37 50%),
+                      linear-gradient(135deg, #6f4e37 50%, transparent 50%);
+    background-position: calc(100% - 18px) 50%, calc(100% - 13px) 50%;
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+}
+nav a {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+nav a:hover {
+    transform: translateY(-2px);
+}
+#reserva button {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#reserva button:hover {
+    transform: translateY(-3px);
+}
+section {
+    box-shadow: 0 4px 15px rgba(62, 39, 35, 0.08);
+}
+article {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+footer {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 -3px 10px rgba(62, 39, 35, 0.12);
 }
