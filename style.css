@@ -5,12 +5,15 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    position: relative;
 }
 header {
-    background-color: #7a5941;
+    background-color: rgba(62, 39, 35, 0.92);
     color: white;
     text-align: center;
     padding: 30px;
+    position: relative;
+    z-index: 1;
 }
 nav ul {
     list-style: none;
@@ -24,9 +27,14 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 nav a:hover {
     color: #e8c39e;
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
 }
 main {
     max-width: 1000px;
@@ -35,6 +43,10 @@ main {
 }
 section {
     margin-bottom: 40px;
+    background-color: rgba(255, 255, 255, 0.82);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(62, 39, 35, 0.08);
 }
 section h2 {
     color: #6f4e37;
@@ -50,6 +62,9 @@ section h2 {
     width: 300px;
     height: 220px;
     object-fit: cover;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
 }
 .gallery-container figure {
     margin: 0;
@@ -66,13 +81,15 @@ article {
     margin-bottom: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(62, 39, 35, 0.12);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 article:hover {
     transform: translateY(-4px);
     box-shadow: 0 7px 16px rgba(62, 39, 35, 0.18);
 }
 article li strong {
+    color: #6f4e37;
+    font-size: 18px;
     transition: color 0.3s;
 }
 
@@ -83,10 +100,10 @@ article li p {
     font-size: 14px;
     line-height: 1.5;
     opacity: 0.85;
+    margin: 5px 0 0;
+    color: #6f4e37;
 }
-.gallery-container img {
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
+
 
 .gallery-container img:hover {
     transform: scale(1.04);
@@ -106,10 +123,7 @@ article ul {
 article li {
     margin-bottom: 15px;
 }
-article li p {
-    margin: 5px 0 0;
-    color: #6f4e37;
-}
+
 form {
     max-width: 500px;
     margin: 0 auto;
@@ -150,6 +164,9 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 40px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 -3px 10px rgba(62, 39, 35, 0.12);
 }
 #audio {
     text-align: center;
@@ -158,14 +175,12 @@ footer {
     line-height: 1.6;
     text-align: center;
 }
-article li strong {
-    color: #6f4e37;
-    font-size: 18px;
-}
+
 h1,
 h2,
 h3 {
     font-family: Georgia, serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
 }
 header h1 {
     font-family: "Brush Script MT", "Segoe Script", cursive;
@@ -177,9 +192,7 @@ section h2,
 article h3 {
     color: #3e2723;
 }
-body {
-    position: relative;
-}
+
 body::before {
     content: "";
     position: fixed;
@@ -188,23 +201,7 @@ body::before {
     backdrop-filter: blur(3px);
     z-index: -1;
 }
-section {
-    background-color: rgba(255, 255, 255, 0.82);
-    padding: 25px;
-    border-radius: 12px;
-}
-header {
-    position: relative;
-    z-index: 1;
-}
-header {
-    background-color: rgba(62, 39, 35, 0.92);
-}
-h1,
-h2,
-h3 {
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
-}
+
 .contact-info {
     max-width: 500px;
     margin: 20px auto;
@@ -230,22 +227,14 @@ article li:last-child {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
 }
-nav a {
-    padding: 8px 12px;
-    border-radius: 6px;
-    transition: background-color 0.3s;
-}
-
-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-}
-#reserva {
+ #reserva {
     background-color: rgba(248, 241, 233, 0.95);
     max-width: 700px;
     margin: 40px auto;
     padding: 35px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(62, 39, 35, 0.15);
+    position: relative;
 }
 #reserva h2 {
     font-size: 28px;
@@ -275,11 +264,10 @@ nav a:hover {
 }
 
 #reserva input[type="radio"] {
+    display: none;
     accent-color: #6f4e37;
     margin-right: 5px;
-}
-#reserva input[type="radio"] {
-    display: none;
+    
 }
 #reserva input[type="radio"] + label {
     display: inline-block;
@@ -349,6 +337,7 @@ nav a:hover {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 #reserva button:hover {
@@ -388,10 +377,9 @@ nav a:hover {
     font-family: Georgia, serif;
     font-style: italic;
     text-shadow: 1px 1px 2px rgba(62, 39, 35, 0.2);
-}.contact-intro {
-    font-size: 22px;
-    font-weight: bold;
+
 }
+
 header h1 {
     margin-bottom: 10px;
     font-size: 48px;
@@ -458,40 +446,14 @@ html {
     color: #3e2723;
     cursor: pointer;
     transition: all 0.3s;
-}
-#reserva {
-    position: relative;
-}
-
-#reserva select {
-    background-image: linear-gradient(45deg, transparent 50%, #6f4e37 50%),
+background-image: linear-gradient(45deg, transparent 50%, #6f4e37 50%),
                       linear-gradient(135deg, #6f4e37 50%, transparent 50%);
     background-position: calc(100% - 18px) 50%, calc(100% - 13px) 50%;
     background-size: 5px 5px, 5px 5px;
     background-repeat: no-repeat;
 }
-nav a {
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
 
-nav a:hover {
-    transform: translateY(-2px);
-}
-#reserva button {
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
 
 #reserva button:hover {
     transform: translateY(-3px);
-}
-section {
-    box-shadow: 0 4px 15px rgba(62, 39, 35, 0.08);
-}
-article {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-footer {
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    box-shadow: 0 -3px 10px rgba(62, 39, 35, 0.12);
 }
